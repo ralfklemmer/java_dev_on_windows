@@ -1,4 +1,4 @@
-# Installation von Git Bash mit ZSH, OH MY ZSH & POWERLEVEL10K | Windows Anleitung
+# Windows 11: Installation von Git Bash mit ZSH, oh-my-zsh und powerlevel10k
 
 ![Winfetch Windows Terminal](https://raw.githubusercontent.com/glenkusuma/github-gist/main/gitbash-with-zsh-omzsh-p10k/winfetch.png)
 
