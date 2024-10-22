@@ -165,19 +165,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-### 2. Restart Zsh
+### 2. Set default theme
+1. edit `~/.zshrc` file
+2. search for "ZSH_THEME"
+3. Change to ZSH_THEME="powerlevel10k/powerlevel10k"
 
-```bash
-exec zsh
-```
-
-### 3. Configuration Wizard
-
-if the configuration wizard doesn't start automatically, type:
-
-```bash
-p10k configure
-```
-
+### 3. Restart Git Bash - p10k Configuration Wizard starts
 So, this step is important, the `p10k` will ask a few configurations for the theme.  
 Please read the options and set that according to your use.
