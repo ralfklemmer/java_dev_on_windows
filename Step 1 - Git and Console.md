@@ -87,7 +87,7 @@ mkdir ~/.config/git
 echo "" > ~/.config/git/git-prompt.sh
 ```
 
-## 3 Configuring zsh
+## 3. Configuring zsh
 
 ### a. zsh as standalone shell
 
