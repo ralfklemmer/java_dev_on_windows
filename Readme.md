@@ -5,6 +5,7 @@ Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 
 # Anleitung
 [Step 1](Step_1_Git_and_Console.md)
+
 [Step 2](Step_2_Java_und_Maven.md)
 
 Das Video findest du auf Youtube unter AISZGASOUDGZAOSUDGZAOSUDGZOUG.
