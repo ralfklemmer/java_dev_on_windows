@@ -10,23 +10,23 @@ Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 Das Video findest du auf Youtube unter AISZGASOUDGZAOSUDGZAOSUDGZOUG.
 
 # Wichtig
-- Wir installieren alles unter eurem Windows Benutzerordner. Dort legen wir folgende Ordnerstruktur an (z.B. für den Benutzer "ralf"):
+Wir installieren alles unter eurem Windows Benutzerordner. Dort legen wir folgende Ordnerstruktur an (z.B. für den Benutzer "ralf"):
 ```
 /Users/ralf/dev/tools
 /Users/ralf/dev/repo
 ```
 # FAQ
-> Warum brauchen wir bei diesem Setup keine Admin-Rechte?
+Warum brauchen wir bei diesem Setup keine Admin-Rechte?
 
-Weil wir alles relevant unter deinem Benutzerverzeichnis installieren und hier hast du volle Kontrolle.
+> Weil wir alles relevant unter deinem Benutzerverzeichnis installieren und hier hast du volle Kontrolle.
 
-> Warum verwenden wir kein WSL2?
+Warum verwenden wir kein WSL2?
 
-WSL2 ist super, aber die Lernkurve ist höher, denn ihr müsst erst damit zurecht kommen, dass ihr quasi zwei separate Computer verwalten müsst. Z.B. nur weil ihr unter WSL etwas installiert ist dies eurem Windows nicht bekannt.
+> WSL2 ist super, aber die Lernkurve ist höher, denn ihr müsst erst damit zurecht kommen, dass ihr quasi zwei separate Computer verwalten müsst. Z.B. nur weil ihr unter WSL etwas installiert ist dies eurem Windows nicht bekannt.
 
-> Wann muss ich auf WSL umsteigen?
+Wann muss ich auf WSL umsteigen?
 
-Wenn du z.B. mit Docker arbeiten möchtest oder deine Software auf einem Linuxsystem testen oder bauen möchtest.
+> Wenn du z.B. mit Docker arbeiten möchtest oder deine Software auf einem Linuxsystem testen oder bauen möchtest.
 
 # Spezielle Tools für Windows 11
 - Leichtgewichtiger Editor: z.B.: Sublime oder VSCode. Einfach kurz eine kleine Datei anzupassen ohne das lange Warten zum Laden einer großem IDE wie Eclipse oder IntelliJ.
