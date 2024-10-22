@@ -4,10 +4,8 @@ Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 **Diese Lösung basiert nicht auf WSL, da hierzu zwingend Admin-Rechte erforderlich sind.**
 
 # Anleitung
-[1. [Step 1]([Step 1 - Git and Console.md](https://github.com/ralfklemmer/java_dev_on_windows/blob/eaccb7b3ab5a01f7c6dd830e56f5231d0eee5568/Step%201%20-%20Git%20and%20Console.md))
-](https://github.com/ralfklemmer/java_dev_on_windows/blob/eaccb7b3ab5a01f7c6dd830e56f5231d0eee5568/Step%201%20-%20Git%20and%20Console.md)
-
-[2. [Step 2](Step 2 - Java und Maven.md)](https://github.com/ralfklemmer/java_dev_on_windows/blob/eaccb7b3ab5a01f7c6dd830e56f5231d0eee5568/Step%202%20-%20Java%20und%20Maven.md)
+[1. [Step 1]([Step 1 - Git and Console.md])
+[2. [Step 2]([Step 2 - Java und Maven.md])
 
 Das Video findest du auf Youtube unter AISZGASOUDGZAOSUDGZAOSUDGZOUG.
 
