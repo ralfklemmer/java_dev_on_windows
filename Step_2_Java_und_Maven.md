@@ -1,5 +1,8 @@
 # Java und Maven Installation
 
+Video zu dieser Anleitung: :movie_camera: [Video - Windows 11: Java und Maven installieren](https://youtu.be/g1GmP9uFuMw)
+
+
 ## Java
 1. Ein Java JDK (Java Development Kit) herunterladen. Z.B.: von [jdk.java.net](https://jdk.java.net/).
 2. Zip entpacken und an einen gewünscheten Ort kopieren z.B. C:\Users\myname\dev\tools\java\java23.
