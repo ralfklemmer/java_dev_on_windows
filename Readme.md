@@ -1,17 +1,19 @@
-Die Einrichtung von Java auf Windows kann recht knifflig sein. Besonders wenn der Bentzer keine Admin-Recht besitzt.
+Die Einrichtung von Java auf Windows kann recht knifflig sein :unamused:. Besonders wenn der Bentzer keine Admin-Recht besitzt.
 Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 
 **Diese Lösung basiert nicht auf WSL, da hierzu zwingend Admin-Rechte erforderlich sind.**
 
 # Anleitung und Video
-[01 - Windows 11: Git Bash und oh-my-zsh installieren](Step_1_Git_and_Console.md)
-[Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/aqukKyAES7o)
+:mag: [01 - Windows 11: Git Bash und oh-my-zsh installieren](Step_1_Git_and_Console.md)
 
-[02 - Windows 11: Java und Maven installieren](Step_2_Java_und_Maven.md)
-[Video - Windows 11: Java und Maven installieren](https://youtu.be/g1GmP9uFuMw)
+:movie_camera: [Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/aqukKyAES7o)
 
-Test des gesamten Setups mit Eclipse und IntelliJ:
-[Video - Windows 11: Windows 11: Eclipse und IntelliJ installieren](https://youtu.be/p-0A3OI62Ik)
+:mag: [02 - Windows 11: Java und Maven installieren](Step_2_Java_und_Maven.md)
+
+:movie_camera: [Video - Windows 11: Java und Maven installieren](https://youtu.be/g1GmP9uFuMw)
+
+:checkered_flag: Test des gesamten Setups mit Eclipse und IntelliJ:
+:movie_camera: [Video - Windows 11: Windows 11: Eclipse und IntelliJ installieren](https://youtu.be/p-0A3OI62Ik)
 
 # Wichtig
 Wir installieren alles unter eurem Windows Benutzerordner. Dort legen wir folgende Ordnerstruktur an (z.B. für den Benutzer "ralf"):
