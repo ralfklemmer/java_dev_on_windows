@@ -3,12 +3,15 @@ Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 
 **Diese Lösung basiert nicht auf WSL, da hierzu zwingend Admin-Rechte erforderlich sind.**
 
-# Anleitung
-[Step 1](Step_1_Git_and_Console.md)
+# Anleitung und Video
+[01 - Windows 11: Git Bash und oh-my-zsh installieren](Step_1_Git_and_Console.md)
+[Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/aqukKyAES7o)
 
-[Step 2](Step_2_Java_und_Maven.md)
+[02 - Windows 11: Java und Maven installieren](Step_2_Java_und_Maven.md)
+[Video - Windows 11: Java und Maven installieren](https://youtu.be/g1GmP9uFuMw)
 
-Das Video findest du auf Youtube unter AISZGASOUDGZAOSUDGZAOSUDGZOUG.
+Test des gesamten Setups mit Eclipse und IntelliJ:
+[Video - Windows 11: Windows 11: Eclipse und IntelliJ installieren](https://youtu.be/p-0A3OI62Ik)
 
 # Wichtig
 Wir installieren alles unter eurem Windows Benutzerordner. Dort legen wir folgende Ordnerstruktur an (z.B. für den Benutzer "ralf"):
