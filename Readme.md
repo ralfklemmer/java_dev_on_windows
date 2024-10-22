@@ -4,8 +4,8 @@ Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 **Diese Lösung basiert nicht auf WSL, da hierzu zwingend Admin-Rechte erforderlich sind.**
 
 # Anleitung
-[1. [Step 1]([Step 1 - Git and Console.md])
-[2. [Step 2]([Step 2 - Java und Maven.md])
+[Step 1]("Step 1 - Git and Console.md")
+[Step 2]("Step 2 - Java und Maven.md")
 
 Das Video findest du auf Youtube unter AISZGASOUDGZAOSUDGZAOSUDGZOUG.
 
