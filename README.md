@@ -148,8 +148,12 @@ fi
 ## 5. Install oh-my-zsh
 ### Ensure zip command is in Path
 Oh-My-Zsh installation expects a zip command link on Linux is available. 
+
+1. Download GNUzip
 To emulate this on Windows install the GNUzip32 Complete package <https://gnuwin32.sourceforge.net/packages/zip.htm>.
-After that add the _bin_ directory to your environment variables.
+
+2. Add bin-directory to Path environment variable
+After that add the _bin_ directory to your path environment variables in Windows.
 
 ### execute the following cmd on git bash  
 
