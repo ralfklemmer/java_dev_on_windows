@@ -4,15 +4,13 @@ Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 **Diese Lösung basiert nicht auf WSL, da hierzu zwingend Admin-Rechte erforderlich sind.**
 
 # Anleitung und Video
-:mag: [01 - Windows 11: Git Bash und oh-my-zsh installieren](Step_1_Git_and_Console.md)
-
+:mag: [01 - Windows 11: Git Bash und oh-my-zsh installieren](Step_1_Git_and_Console.md) <br/>
 :movie_camera: [Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/aqukKyAES7o)
 
-:mag: [02 - Windows 11: Java und Maven installieren](Step_2_Java_und_Maven.md)
-
+:mag: [02 - Windows 11: Java und Maven installieren](Step_2_Java_und_Maven.md) <br/>
 :movie_camera: [Video - Windows 11: Java und Maven installieren](https://youtu.be/g1GmP9uFuMw)
 
-:checkered_flag: Test des gesamten Setups mit Eclipse und IntelliJ:
+:checkered_flag: Test des gesamten Setups mit Eclipse und IntelliJ: <br/>
 :movie_camera: [Video - Windows 11: Windows 11: Eclipse und IntelliJ installieren](https://youtu.be/p-0A3OI62Ik)
 
 # Wichtig
@@ -22,15 +20,15 @@ Wir installieren alles unter eurem Windows Benutzerordner. Dort legen wir folgen
 /Users/ralf/dev/repo
 ```
 # FAQ
-Warum brauchen wir bei diesem Setup keine Admin-Rechte?
+:question: Warum brauchen wir bei diesem Setup keine Admin-Rechte?
 
 > Weil wir alles relevant unter deinem Benutzerverzeichnis installieren und hier hast du volle Kontrolle.
 
-Warum verwenden wir kein WSL2?
+:question: Warum verwenden wir kein WSL2?
 
 > WSL2 ist super, aber die Lernkurve ist höher, denn ihr müsst erst damit zurecht kommen, dass ihr quasi zwei separate Computer verwalten müsst. Z.B. nur weil ihr unter WSL etwas installiert ist dies eurem Windows nicht bekannt.
 
-Wann muss ich auf WSL umsteigen?
+:question: Wann muss ich auf WSL umsteigen?
 
 > Wenn du z.B. mit Docker arbeiten möchtest oder deine Software auf einem Linuxsystem testen oder bauen möchtest.
 
