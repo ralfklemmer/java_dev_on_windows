@@ -3,29 +3,29 @@
 ## Begleitvideo zu dieser Anleitung
 :movie_camera: [Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/aqukKyAES7o)
 
-## 0. :warning: Installationsverzeichnise und Struktur auf deinem Rechner :warning:
+## :warning: Installationsverzeichnise und Struktur auf deinem Rechner
 Auf vielen Rechnern sind die Rechte eingeschränkt, um dennoch eine lauffähige Entwicklungsumgebung zu installieren, werden wird alles unter dem Windows Benutzerordern installieren. Hier haben wir immer die Rechte, die wir benötigen.
 
->In aktuellen Versionen von Windows, die auf dem Mehrbenutzersystem der Windows-NT-Linie basieren, hat jeder Benutzer sein eigenes Benutzerverzeichnis. Dieses liegt unter C:\Users\benutzername. benutzername ist dabei die Kennung, unter der sich der Benutzer anmeldet. Users wird dabei im Windows-Explorer in die jeweilige Sprache des Systems übersetzt angezeigt; auf einem deutschen Windows liest man daher Benutzer.
+>In aktuellen Versionen von Windows, die auf dem Mehrbenutzersystem der Windows-NT-Linie basieren, hat jeder Benutzer sein eigenes Benutzerverzeichnis. Dieses liegt unter ```C:\Users\benutzername```. benutzername ist dabei die Kennung, unter der sich der Benutzer anmeldet. Users wird dabei im Windows-Explorer in die jeweilige Sprache des Systems übersetzt angezeigt; auf einem deutschen Windows liest man daher Benutzer.
 
 Damit du der Anleitung voll vertrauen kannst, musst die gleich Ordnerstruktur erstellen:</br>
 ![Alt-Text](verzeichnisse.png)
 
 ## 1. Git Bash herunterladen & installieren
 **Download**: <https://git-scm.com/download/win> </br>
-**Installationsordner**: "C:\Users\benutzername\dev\tools\git" </br>
+**Installationsordner**: ```C:\Users\benutzername\dev\tools\git``` </br>
 
-> :warning: Bitte unbedingt im Windows Benutzerverzeichnis ("C:\Users\benutzername") installieren!
+> :warning: Bitte unbedingt im Windows Benutzerverzeichnis (```C:\Users\benutzername```) installieren!
 
 ## 2. ZSH herunterladen & installieren
 
 ### a) Nerd Font herunterladen & installieren (für die spätere Verwendung in Git Bash und oh-my-zsh) </br>
-**Download**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.0/EnvyCodeR.zip </br>
-**Entpacken**: Windows 11 kann zip-Dateien von Haus aus entpacken. Die Dateien mit der Endung "ttf" sind besondere Schriftarten, die wir nachher benötigen. </br>
+**Download**: <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.0/EnvyCodeR.zip> </br>
+**Entpacken**: Windows 11 kann zip-Dateien von Haus aus entpacken. Die Dateien mit der Endung ```ttf``` sind besondere Schriftarten, die wir nachher benötigen. </br>
 **Installation**: Alle Schriftarten installieren indem du alle markierst, dann die rechte Maustaste und auf _installieren_ gehst. </br>
 
 > :information_source:
-Du kannst auch deine deine eigenen Schriftarten auswählen und installieren. Dann musst du aber den in Namen der Schriftart in Schritt 5 in der `~/.minttyrc` entsprechend anpassen. </br>
+Du kannst auch deine deine eigenen Schriftarten auswählen und installieren. Dann musst du aber den in Namen der Schriftart in Schritt 5 in der ```~/.minttyrc``` entsprechend anpassen. </br>
 Weitere Nerd Fonts findest du unter <https://www.nerdfonts.com/font-downloads>. 
 
 ### b) Lade das neueste zsh-Paket herunter
