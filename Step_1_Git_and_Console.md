@@ -1,53 +1,63 @@
 # Windows 11: Installation von Git Bash mit ZSH, oh-my-zsh und powerlevel10k
 
-![Winfetch Windows Terminal](https://raw.githubusercontent.com/glenkusuma/github-gist/main/gitbash-with-zsh-omzsh-p10k/winfetch.png)
-
-## 0. Video zu dieser Anleitung
+## Begleitvideo zu dieser Anleitung
 :movie_camera: [Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/aqukKyAES7o)
 
+## 0. :warning: Installationsverzeichnise und Struktur auf deinem Rechner :warning:
+Auf vielen Rechnern sind die Rechte eingeschränkt, um dennoch eine lauffähige Entwicklungsumgebung zu installieren, werden wird alles unter dem Windows Benutzerordern installieren. Hier haben wir immer die Rechte, die wir benötigen.
+
+>In aktuellen Versionen von Windows, die auf dem Mehrbenutzersystem der Windows-NT-Linie basieren, hat jeder Benutzer sein eigenes Benutzerverzeichnis. Dieses liegt unter C:\Users\benutzername. benutzername ist dabei die Kennung, unter der sich der Benutzer anmeldet. Users wird dabei im Windows-Explorer in die jeweilige Sprache des Systems übersetzt angezeigt; auf einem deutschen Windows liest man daher Benutzer.
+
+Damit du der Anleitung voll vertrauen kannst, musst die gleich Ordnerstruktur erstellen:</br>
+![Alt-Text](verzeichnisse.png)
 
 ## 1. Git Bash herunterladen & installieren
+**Download**: <https://git-scm.com/download/win> </br>
+**Installationsordner**: "C:\Users\benutzername\dev\tools\git" </br>
 
-<https://git-scm.com/download/win>
+> :warning: Bitte unbedingt im Windows Benutzerverzeichnis ("C:\Users\benutzername") installieren!
 
 ## 2. ZSH herunterladen & installieren
 
-### 1. Nerd Font herunterladen & installieren (für die spätere Verwendung in Git Bash und oh-my-zsh)
-Du kannst deine eigenen Schriftarten auswählen und installieren.
+### a) Nerd Font herunterladen & installieren (für die spätere Verwendung in Git Bash und oh-my-zsh) </br>
+**Download**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.0/EnvyCodeR.zip </br>
+**Entpacken**: Windows 11 kann zip-Dateien von Haus aus entpacken. Die Dateien mit der Endung "ttf" sind besondere Schriftarten, die wir nachher benötigen. </br>
+**Installation**: Alle Schriftarten installieren indem du alle markierst, dann die rechte Maustaste und auf _installieren_ gehst. </br>
+
+> :information_source:
+Du kannst auch deine deine eigenen Schriftarten auswählen und installieren. Dann musst du aber den in Namen der Schriftart in Schritt 5 in der `~/.minttyrc` entsprechend anpassen. </br>
 Weitere Nerd Fonts findest du unter <https://www.nerdfonts.com/font-downloads>. 
 
-In dieser Anleitung verwende ich `EnvyCodeR Nerd Font Mono` <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.0/EnvyCodeR.zip>.
-Entpacke die Dateien und doppelklicke zum Installieren.
+### b) Lade das neueste zsh-Paket herunter
 
-### 2. Lade das neueste zsh-Paket herunter
-
-<https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64>
+**Download-Webseite**: <https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64>. 
+![Alt-Text](zsh-download.png)
 
 Beispiel:
 
 ```txt
 zsh-5.9-2-x86_64.pkg.tar.zst
 ```
+**Entpacken** </br>
+Windows 11 kann dies wieder von Haus aus. Solltest es nicht klappen, dann kannst du auch mit dem kostenlosen Tool Peazip die Datei entpacken <https://peazip.github.io/zst-compressed-file-format.html>.
 
-Das Paket ist mit `zst` komprimiert, daher benötigen wir einen "speziellen" Entpacker.  
-In meinem Fall habe ich diese Datei heruntergeladen: <https://mirror.msys2.org/msys/x86_64/zsh-5.9-2-x86_64.pkg.tar.zst>
-Und sie mit Peazip entpackt: <https://peazip.github.io/zst-compressed-file-format.html>.
+### c) Entpackte Dateien in Git Bash Installationsverzeichnis kopieren
+Bitte alle entpackten Datein kopieren und in das Installationsverzeichnises von Git Bash kopieren.
+Wenn du dich an die Verzeichnisstruktur gehalten hast, dann ist dies ```C:\Users\benutzername\dev\tools\git```.
 
-### 3. Entpacke den Inhalt in dein Git Bash Installationsverzeichnis
-
-Standardmäßig unter ```"C:\Program Files\Git"```
-
-### 4. Teste und konfiguriere zsh
-
+### d) Test, ob zsh korrekt installiert wurde
 Öffne Git Bash und gib ein:
 
 ```bash
 zsh
 ```
+Es darf keine Fehlermeldung kommen. Du solltest aber am Ende des Prompts ein ```%```-Zeichen sehen (mit bash haben wir ein ```$```).
 
-Dies ist ein wichtiger Schritt, `zsh` wird einige Konfigurationen abfragen, wie Tab-Vervollständigung, Verlauf usw. Bitte lies die Optionen und passe die Konfiguration an deine Bedürfnisse an.
+:information_source: `zsh` wird einige Konfigurationen abfragen, wie Tab-Vervollständigung, Verlauf usw. Bitte lies die Optionen und passe die Konfiguration an deine Bedürfnisse an.
 
-### 5. Bearbeite die `~/.minttyrc` Datei (erstelle sie, falls sie nicht existiert)
+### 5. Erstelle die `~/.minttyrc` Datei
+a) Gib ein: ``` touch .minttyrc ``` (erstellt die leere Datei ```minttyc```)</br>
+b) folgenden Inhalt einfügen </br>
 
 ```.minttyrc
 BoldAsFont=no
@@ -77,107 +87,102 @@ CursorType=block
 CtrlExchangeShift=yes
 ```
 
-### 6. Konfiguriere git-prompt.sh
+### 6. Erstelle git-prompt.sh
 
-Wenn du diese Meldung erhältst:
-
-`ERROR: this script is obsolete, please see git-completion.zsh`
-
-Liegt das daran, dass etc\profile.d\git-prompt.sh die Shell nicht überprüft, bevor git-completion.bash eingebunden wird. Um dies zu beheben, kannst du eine leere Datei erstellen:
+Um einen Fehlermeldung vorzubeugen, führe den folgenden Befehl aus:
 
 ```bash
-mkdir ~/.config/git
-
-echo "" > ~/.config/git/git-prompt.sh
+mkdir -p ~/.config/git && echo "" > ~/.config/git/git-prompt.sh
 ```
+
+Wir vermeiden dadurch die spätere Fehlermeldung ```ERROR: this script is obsolete, please see git-completion.zsh```
 
 ## 3. ZSH konfigurieren
 
-### a. zsh als eigenständige Shell
-
-Bearbeite `/etc/zsh/zshenv` und füge diese Zeile am Anfang der Datei hinzu:
+### a) zsh als eigenständige Shell
+Diesen Befehl in der Git Bash ausführen:
 
 ```bash
-PATH=/mingw64/bin/usr/bin:/usr/bin:/bin:$PATH
+sudo sed -i '1iPATH=/mingw64/bin:/usr/bin:/usr/bin:/bin:$PATH' /etc/zsh/zshenv
 ```
 
-### b. ZSH als Standard-Shell beim Start von Git Bash konfigurieren
-
-#### Bearbeite die Datei `C:\Program FIles\Git\etc\bash.bashrc`
+### b) In `~/.bashrc` auf zsh Shell umleiten
 
 Füge folgende Zeilen am Ende der Datei hinzu:
+
+```bash
+echo '# Launch Zsh
+if [ -t 1 ]; then
+exec zsh
+fi' >> ~/.bashrc
+```
+
+### c) ZSH als Standard-Shell beim Start von Git Bash konfigurieren
+
+Füge folgende Zeilen am Ende der Datei ```C:\Users\benutzername\dev\tools\git\etc\bash.bashrc``` hinzu:
 
 ```bash
 # Get user bash configuration ~/.bashrc
 source ~/.bashrc;
 ```
 
-#### Bearbeite die `~/.bashrc` Datei (erstelle sie, falls sie nicht existiert)
-
-Füge folgende Zeilen am Ende der Datei hinzu:
-
-```bash
-# Launch Zsh
-if [ -t 1 ]; then
-exec zsh
-fi
-```
-
-#### Schließe und öffne Git Bash erneut
+:fast_forward: Schließe und öffne Git Bash erneut
 
 ## 4. Zsh Plugins installieren
+Wir installieren: zsh-autosuggestions & zsh-syntax-highlighting
 
-### Installation der Plugins zsh-autosuggestions & zsh-syntax-highlighting
+**Download**: 
 
-1. Installation & Ausführung
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/plugins/zsh-syntax-highlighting
+```
+    
+**Installation**:    
 
-    ```bash
-    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/plugins/zsh-syntax-highlighting
+```bash
+source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh && source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
 
-    source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    ```
-
-2. Bearbeite die `~/.zshrc` Datei
-
-    ```zshrc
-    plugins=( 
-      ...
-      zsh-autosuggestions
-      zsh-syntax-highlighting
-    )
-    ```
+3. Bearbeite die `~/.zshrc` Datei
+Die aufgeführten Plugins in die Sektion ```plugins``` einfügen. Falls die Sektion nicht vorhanden ist, dann den foglenden Ausdruck komplett einfügen:
+```zshrc
+plugins=( 
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+```
 
 ## 5. Oh-my-zsh installieren
-### Stelle sicher, dass der zip-Befehl im Path ist
 Die Oh-My-Zsh Installation erwartet einen zip-Befehl wie unter Linux. 
 
-1. GNUzip herunterladen
-Um dies unter Windows zu emulieren, installiere das GNUzip32 Complete Paket <https://gnuwin32.sourceforge.net/packages/zip.htm>.
+**a) Vorarbeit** </br>
+GNUzip herunterladen und installieren ```<https://gnuwin32.sourceforge.net/packages/zip.htm>```(Complete Paket). 
+Gerne unter ```C:\Users\benutzername\dev\tools\zip``` </br>
 
-2. Bin-Verzeichnis zur Path-Umgebungsvariable hinzufügen
-Füge anschließend das _bin_ Verzeichnis zu deinen Path-Umgebungsvariablen in Windows hinzu.
-
-### Führe den folgenden Befehl in Git Bash aus
+**b) Download und Installation von Oh-My-Zsh** </br>
+Führe den folgenden Befehl in Git Bash aus
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## 6. Powerlevel10k installieren
+## 6. Theme Powerlevel10k installieren** </br>
 
-### 1. Powerlevel10k Installation
+**a) Download und Installation**: </br>
+Führe den folgenden Befehl in Git Bash aus
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-### 2. Standard-Theme festlegen
+**b) Standard-Theme festlegen**
 1. Bearbeite die `~/.zshrc` Datei
-2. Suche nach "ZSH_THEME"
-3. Ändere es zu ZSH_THEME="powerlevel10k/powerlevel10k"
+2. Suche die Variable ```ZSH_THME``` und ändere die Zeile zu ```ZSH_THEME="powerlevel10k/powerlevel10k"```
 
-### 3. Git Bash neu starten - p10k Konfigurations-Assistent startet
-Dieser Schritt ist wichtig, `p10k` wird einige Konfigurationen für das Theme abfragen.  
-Bitte lies die Optionen und stelle sie entsprechend deinen Bedürfnissen ein.
+**c) Git Bash neu starten**
+
+**d) p10k Konfigurations-Assistent startet**
+Führe den Assistenten aus und konfiguriere das Aussehen wie es dir gefällt.
+
+## 7. Git Bash neu starten
+
