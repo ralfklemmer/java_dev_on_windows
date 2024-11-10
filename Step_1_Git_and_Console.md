@@ -177,7 +177,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 **b) Standard-Theme festlegen**
 1. Bearbeite die `~/.zshrc` Datei
-2. Suche die Variable ```ZSH_THME``` und ändere die Zeile zu ```ZSH_THEME="powerlevel10k/powerlevel10k"```
+2. Suche die Variable ```ZSH_THEME``` und ändere die Zeile zu ```ZSH_THEME="powerlevel10k/powerlevel10k"```
 
 **c) Git Bash neu starten**
 
