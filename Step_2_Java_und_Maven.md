@@ -22,8 +22,8 @@ Die gerade konfigurierte Java Version sollte angezeigt werden.
 1. [Maven heruntenladen](https://maven.apache.org/download.cgi)
 2. Zip entpacken und an einen gewünscheten Ort kopieren z.B. ```C:\Users\benutzername\dev\tools\maven```
 3. Benutzer-Umgebungsvariable anpassen
-```MAVEN_HOME``` hinzufügen: Eintrag lautet ```MAVEN_HOME="C:\Users\myname\dev\tools\maven"```
-Path anpassen: Eintrag ```%MAVEN_HOME%\bin``` hinzufügen
+```MAVEN_OPTS``` hinzufügen: Eintrag lautet ```MAVEN_OPTS="C:\Users\myname\dev\tools\maven"```
+Path anpassen: Eintrag ```%MAVEN_OPTS%\bin``` hinzufügen
 
 ## Umgebungsvariablen prüfen
 ![Alt-Text](umgebungsvariablen.png)
