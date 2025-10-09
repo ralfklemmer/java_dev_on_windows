@@ -5,13 +5,13 @@ Daher habe ich ein Video und eine Anleitung geschrieben was genau zu tun ist.
 
 # Anleitung und Video
 :mag: [01 - Windows 11: Git Bash und oh-my-zsh installieren](Step_1_Git_and_Console.md) <br/>
-:movie_camera: [Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/aqukKyAES7o)
+:movie_camera: [Video - Windows 11: Git Bash und oh-my-zsh installieren](https://youtu.be/pZfYSD5deaM)
 
 :mag: [02 - Windows 11: Java und Maven installieren](Step_2_Java_und_Maven.md) <br/>
-:movie_camera: [Video - Windows 11: Java und Maven installieren](https://youtu.be/g1GmP9uFuMw)
+:movie_camera: [Video - Windows 11: Java und Maven installieren](https://youtu.be/_TrTKSgyigw)
 
 :checkered_flag: Test des gesamten Setups mit Eclipse und IntelliJ: <br/>
-:movie_camera: [Video - Windows 11: Windows 11: Eclipse und IntelliJ installieren](https://youtu.be/p-0A3OI62Ik)
+:movie_camera: [Video - Windows 11: Windows 11: Eclipse und IntelliJ installieren](https://youtu.be/e7Mwvx9YVeY)
 
 # Wichtig
 Wir installieren alles unter eurem Windows Benutzerordner. Dort legen wir folgende Ordnerstruktur an (z.B. für den Benutzer "ralf"):
