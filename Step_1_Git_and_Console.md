@@ -100,10 +100,15 @@ Wir vermeiden dadurch die spätere Fehlermeldung ```ERROR: this script is obsole
 ## 3. ZSH konfigurieren
 
 ### a) zsh als eigenständige Shell
-Diesen Befehl in der Git Bash ausführen:
+Der folgende Befehl für din die Datei `zshenv` eine Zeile hinzu. Daher nur einmal ausführen! Bei Problemen könnt ihr die Datei löschen, sie wird durch den Befehl neu erstellt.
 
+Falls du Admin-Rechte auf deinem Rechner hast - diesen Befehl in der Git Bash ausführen:
 ```bash
 sudo sed -i '1iPATH=/mingw64/bin:/usr/bin:/usr/bin:/bin:$PATH' /etc/zsh/zshenv
+```
+Ohne Admin-Rechte:
+```bash
+sed -i '1iPATH=/mingw64/bin:/usr/bin:/usr/bin:/bin:$PATH' /etc/zsh/zshenv
 ```
 
 ### b) In `~/.bashrc` auf zsh Shell umleiten
